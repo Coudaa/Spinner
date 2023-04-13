@@ -10,7 +10,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
-    private Spinner _spinner1, _spinner2, _spinner3, _spinner4;
+    private Spinner _spinner1, _spinner2, _spinner3, _spinner4, _spinner5;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -21,11 +21,13 @@ public class MainActivity extends AppCompatActivity {
         _spinner2 = findViewById(R.id.spinner2);
         _spinner3 = findViewById(R.id.spinner3);
         _spinner4 = findViewById(R.id.spinner4);
+        _spinner5 = findViewById(R.id.spinner5);
 
         initSpinner1();
         initSpinner2();
         initSpinner3();
         initSpinner4();
+        initSpinner5();
     }
 
     private void initSpinner1(){
@@ -70,5 +72,29 @@ public class MainActivity extends AppCompatActivity {
 
         ArrayAdapter<String> arrayAdapter4 = new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, genapList);
         _spinner4.setAdapter(arrayAdapter4);
+    }
+    private void initSpinner5(){
+        int bilangan;
+
+        List<String> primaList = new ArrayList<>();
+
+        for (int i=2; i<=1000; i++)
+        {
+            bilangan=0;
+            for (int j=1; j<=i; j++)
+            {
+                if (i%j==0)
+                {
+                    bilangan = bilangan+1;
+                }
+            }
+            if (bilangan==2)
+            {
+                primaList.add("Bilangan ke-" + i);
+            }
+        }
+
+        ArrayAdapter<String> arrayAdapter5 = new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, primaList);
+        _spinner5.setAdapter(arrayAdapter5);
     }
 }
