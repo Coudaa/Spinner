@@ -31,7 +31,7 @@ public class MainActivity extends AppCompatActivity {
     private void initSpinner1(){
         List<String> buahList = new ArrayList<>();
         buahList.add("Apel");
-        buahList.add("Semangka");
+        buahList.add("Semongko");
         buahList.add("Pisang");
         buahList.add("Pepaya");
         buahList.add("Durian");
