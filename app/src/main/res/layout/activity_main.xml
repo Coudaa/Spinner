@@ -10,11 +10,6 @@
     <Spinner
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="#244f75"
-        android:gravity="center"
-        android:padding="10dp"
-        android:text="Spinner 1"
-        android:textColor="#FFFFFF"
         android:id="@+id/spinner1"/>
 
     <Spinner

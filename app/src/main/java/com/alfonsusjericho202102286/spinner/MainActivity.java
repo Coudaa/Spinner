@@ -22,7 +22,10 @@ public class MainActivity extends AppCompatActivity {
         _spinner3 = findViewById(R.id.spinner3);
         _spinner4 = findViewById(R.id.spinner4);
 
-
+        initSpinner1();
+        initSpinner2();
+        initSpinner3();
+        initSpinner4();
     }
 
     private void initSpinner1(){
